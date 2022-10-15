@@ -58,7 +58,12 @@ h6{
 }
 .s2{
     background-color: var(--secondaryColor);
-    border-bottom: var(--borderColor);
+    border-bottom:1px solid var(--borderColor);
+    overflow: auto;
+}
+.s3{
+    background-color: var(--secondaryColor);
+    border-bottom:1px solid var(--borderColor);
     overflow: auto;
 }
 .main-container{
@@ -223,15 +228,18 @@ h6{
 .about-wrapper{
     display: grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    padding-bottom: 50px;
-    padding-top: 50px; 
+    padding-bottom: 30px;
+    padding-top: 30px; 
     gap: 100px; 
+    align-items: center;
+}
+.about-me{
+    margin-bottom: 1px;
 }
 #skills{
     display: flex;
     justify-content: space-evenly;
     background-color: var(--previewshadow);
-
 }
 .social-links{
     display: grid;
@@ -239,8 +247,14 @@ h6{
     
 }
 #social-img{
-    width: 100%;
-    height: 500px;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+.contact-links{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
 }
 #contact-form{
     display: block;
@@ -287,11 +301,18 @@ h6{
 @media screen and (max-width:700px){
 .nav-wrapper{
     max-width:100%;
+    
+}
+.intro-wrapper{
+    width: 100%;
+    margin-left: 1px;
+    margin-right: 2px;
+    margin-bottom: 4px;
 }
 #profile-pic{
     height:180px ;
     width: 180px;
-    /* margin-left: 45px; */
+    margin-left: 70px;
 }
 .intro-wrapper{
     grid-template-columns: 1fr ;    
@@ -325,4 +346,14 @@ h6{
     position: relative;
 }
 
+#social-img{
+    margin-top: 0px;
+    height: 100%;
+    width: 100%;
+}
+.contact-links{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
 }
